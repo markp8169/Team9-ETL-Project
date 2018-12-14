@@ -3,14 +3,15 @@ create database restaurant_db;
 use restaurant_db;
 
 Create table inspections (
-serial_number INT PRIMARY KEY,
+serial_number VARCHAR(9) PRIMARY KEY,
 service_description TEXT
 );
 
+
 Create table violations (
-serial_number INT PRIMARY KEY,
+serial_number VARCHAR(9) PRIMARY KEY,
 facility_name TEXT,
-score TEXT,
+score INT,
 violation_description TEXT
 );
 
