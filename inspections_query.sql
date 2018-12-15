@@ -23,7 +23,9 @@ violation_description TEXT
 
 Select * From inspections;
 
-Select vi.facility_id, vi.activity_date, vi.facility_name, vi.score, vi.violation_description, ins.service_description
+Select count(*) From violations;
+
+Select vi.serial_number, vi.activity_date, vi.facility_name, vi.score, vi.violation_description, ins.service_description
 FROM inspections ins
 JOIN violations vi
-ON vi.facility_id = ins.facility_id;
+ON vi.serial_number = ins.serial_number;
